@@ -11,8 +11,6 @@ function App() {
     <div className='App'>
       <div className='Container'>
         <TonConnectButton />
-
-
       </div>
     </div>
   );
