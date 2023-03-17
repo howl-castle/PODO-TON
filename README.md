@@ -1,4 +1,4 @@
-# PODO - Dapp; Wallet Integration + Smart contract
+# PODO - Dapp; Wallet Integration on TON Connect 2 + Smart contract
 
 ### 1. Demo on https://howl-castle.github.io/PODO-TON/
 
@@ -12,7 +12,8 @@
  
  1. BE-SC -> Backend
     - Using Blueprint SDK, Written in FunC and Typescript
-    - for wallet integration and smart contracts
+    - wallet integration; on TON CONNECT 2
+    - smart contracts
        
  2. FE-VITE -> Frontend
     - written in Typescript
@@ -30,11 +31,9 @@
 ```
 -------
 
-## Smart Contracts for PODO-TON
+## Backend: Smart Contracts for PODO-TON, Contracts deployed
 
-## Contracts deployed
-
-## Layout
+### 1. Layout
 
 -   `contracts` - contains the source code of all the smart contracts of the project and their dependencies.
 -   `wrappers` - contains the wrapper classes (implementing `Contract` from ton-core) for the contracts, including any [de]serialization primitives and compilation functions.
@@ -43,12 +42,12 @@
 
 We ask the community to provide any comments on this layout, the wanted/required changes, or even suggestions for entirely different project structures and/or tool concepts.
 
-## Repo contents / tech stack
+### 2. Repo contents / tech stack
 1. Compiling FunC - [https://github.com/ton-community/func-js](https://github.com/ton-community/func-js)
 2. Testing TON smart contracts - [https://github.com/ton-community/sandbox/](https://github.com/ton-community/sandbox/)
 3. Deployment of contracts is supported with [TON Connect 2](https://github.com/ton-connect/), [Tonhub wallet](https://tonhub.com/) or via a direct `ton://` deeplink
 
-## How to use
+### 3. How to use
 ```
     yarn install // setup
 ```
