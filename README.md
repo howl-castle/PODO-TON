@@ -1,18 +1,32 @@
-# Wallet Integration + Smart contract
+# PODO - Dapp; Wallet Integration + Smart contract
 
-### Depolyed on https://howl-castle.github.io/PODO-TON/
+### 1. Demo on https://howl-castle.github.io/PODO-TON/
 
-### Repository structure in brief
-- Branches
-    1. BE-SC -> Backend
+### 2. Repository structure in brief
+
+ *Branches*
+ 
+ 0. main
+    - integrated from FE-VITE
+    - README.md
+ 
+ 1. BE-SC -> Backend
+    - Using Blueprint SDK, Written in FunC and Typescript
     - for wallet integration and smart contracts
-    2. FE-VITE -> Frontend
-    - Built on Vite.js
+       
+ 2. FE-VITE -> Frontend
+    - written in Typescript
+    - Built on Vite.js based on React
 
-### Developement
+### 3. Developement
 ```
-    npm install
+    npm install 
+```
+```
     npm run build
+```
+```
+    npm run dev 
 ```
 -------
 
@@ -35,62 +49,12 @@ We ask the community to provide any comments on this layout, the wanted/required
 3. Deployment of contracts is supported with [TON Connect 2](https://github.com/ton-connect/), [Tonhub wallet](https://tonhub.com/) or via a direct `ton://` deeplink
 
 ## How to use
-* Clone this repo
-* Run `yarn install`
-
-### Building a contract
-1. Interactively
-   1. Run `yarn blueprint build`
-   2. Choose the contract you'd like to build
-1. Non-interactively
-   1. Run `yarn blueprint build <CONTRACT>`
-   2. example: `yarn blueprint build pingpong`
-
-### Deploying a contract
-1. Interactively
-   1. Run `yarn blueprint run`
-   2. Choose the contract you'd like to deploy
-   3. Choose whether you're deploying on mainnet or testnet
-   4. Choose how to deploy:
-      1. With a TON Connect compatible wallet
-      2. A `ton://` deep link / QR code
-      3. Tonhub wallet
-   5. Deploy the contract
-2. Non-interactively
-   1. Run `yarn blueprint run <CONTRACT> --<NETWORK> --<DEPLOY_METHOD>`
-   2. example: `yarn blueprint run pingpong --mainnet --tonconnect`
-
-### Testing
-1. Run `yarn test`
-
-## Adding your own contract
-1. Run `yarn blueprint create <CONTRACT>`
-2. example: `yarn blueprint create MyContract`
-
-* Write code
-  * FunC contracts are located in `contracts/*.fc`
-    * Standalone root contracts are located in `contracts/*.fc`
-    * Shared imports (when breaking code to multiple files) are in `contracts/imports/*.fc`
-  * Tests in TypeScript are located in `test/*.spec.ts`
-  * Wrapper classes for interacting with the contract are located in `wrappers/*.ts`
-  * Any scripts (including deployers) are located in `scripts/*.ts`
-
-* Build
-  * Builder configs are located in `wrappers/*.compile.ts`
-  * In the root repo dir, run in terminal `yarn blueprint build`
-  * Compilation errors will appear on screen, if applicable
-  * Resulting build artifacts include:
-    * `build/*.compiled.json` - the binary code cell of the compiled contract (for deployment). Saved in a hex format within a json file to support webapp imports
-
-* Test
-  * In the root repo dir, run in terminal `yarn test`
-  * Don't forget to build (or rebuild) before running tests
-  * Tests are running inside Node.js by running TVM in web-assembly using [sandbox](https://github.com/ton-community/sandbox)
-
-* Deploy
-  * Run `yarn blueprint run <deployscript>`
-  * Contracts will be rebuilt on each execution
-  * Follow the on-screen instructions of the deploy script
+```
+    yarn install // setup
+```
+```
+    yarn test // testing
+```
   
 # License
 MIT
